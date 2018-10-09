@@ -10,7 +10,7 @@ describe('Sudoku', function() {
 
   it('should work fail', function() {
     var row0 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    var row1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    var row1 = [1, 2, 3, 4, 5, 5, 7, 8, 9];
     var test = new Sudoku(row0, row1);
     expect(test.checkColumn()).toEqual("no Sudoku");
   });

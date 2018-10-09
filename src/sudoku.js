@@ -25,11 +25,16 @@ export function Sudoku(row0, row1){
 // }
 
 Sudoku.prototype.checkColumn = function() {
-  for (var i = 0; i <= 8; i++) {
-    if (this.row0[i] != this.row1[i]){
-      return "yes Sudoku";
+  var row = this.row0;
+  var result = "";
+  for (var i=0; i < row.length; i++) {
+    if (this.row0[i] !== this.row1[i])
+    {
+      console.log(this.row0[i], this.row1[i]);
+      result = "yes Sudoku";
     } else {
-      return "no Sudoku";
+      result = "no Sudoku";
     }
   }
+  return result;
 };
